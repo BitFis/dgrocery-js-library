@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:ft-flow/recommended",
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2015,
+	  "sourceType": "module"
+  },
+  "plugins": [
+    "ft-flow"
+  ],
+  "env": {
+    "jest": true,
+    "es6": true,
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js"
+      ],
+      "env": {
+        "jest": true,
+        "es6": true,
+        "browser": true
+      },
+      "plugins": ["jest"],
+      "rules": {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
+      }
+    }
+  ]
+}
